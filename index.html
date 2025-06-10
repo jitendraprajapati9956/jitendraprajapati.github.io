@@ -38,8 +38,6 @@
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">Jitendra Prajapati</h1>
     </a>
 
@@ -769,13 +767,38 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
             </div>
           </div>
 
-   <form action="https://formsubmit.co/jitendraprajapati9956@gmail.com" method="POST">
+            <div class="col-lg-7">
+            <form action="https://formsubmit.co/jitendraprajapati9956@gmail.com" method="POST">
+             <div class="row gy-4">
+              <div class="col-md-6">       
+              <input type="hidden" name="_captcha" value="false">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" required placeholder="Your Name">
+                   </div>
+                <div class="col-md-6">
+               <label for="email-field" class="pb-2">Your Email</label>
+                <input type="email" name="email" required placeholder="Your Email">
+                     </div>
+                <div class="col-md-12">
+                   <label for="subject-field" class="pb-2">Subject</label>
+                 <input type="text" name="subject" required placeholder="Subject">
+                  </div>
 
-  <input type="hidden" name="_captcha" value="false">
-  <input type="text" name="name" required placeholder="Your Name">
-  <input type="email" name="email" required placeholder="Your Email">
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+         
   <textarea name="message" required placeholder="Your Message"></textarea>
-  <button type="submit">Send</button>
+                      </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+  <button type="submit">Send Message</button>
+                     </div>
+
+              </div>
 </form>
           </div><!-- End Contact Form -->
 
