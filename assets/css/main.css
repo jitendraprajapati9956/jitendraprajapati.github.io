@@ -98,6 +98,35 @@ h6 {
   margin-bottom: 24px;
   font-weight: 600;
 }
+.portfolio-section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00bcd4;
+  margin: 20px 0 30px;
+}
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.portfolio-filters li {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: #222;
+  color: white;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.portfolio-filters li.active {
+  background: #00bcd4;
+  color: black;
+}
 #portfolio {
   background-color: #0e0e0e;  /* or match your sidebar background */
   padding: 60px 0;
