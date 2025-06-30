@@ -44,6 +44,7 @@
     <div class="social-links text-center">
         <a href="https://linkedin.com/in/prajapatijitendra" class="linkedin"><i class="bi bi-linkedin"></i></a>
        <a href="https://github.com/jitendraprajapati9956" class="github"><i class="bi bi-github"></i></a>
+       <button onclick="toggleMode()">Toggle Mode</button>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -53,6 +54,7 @@
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
            <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+        
       </ul>
     </nav>
 
@@ -235,12 +237,18 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
     function downloadResume() {
        const link = document.createElement('a');
     link.href = 'https://github.com/jitendraprajapati9956/jitendraprajapati.github.io/blob/main/Resume.pdf'; // Ensure this path is correct relative to your HTML file
-    link.download = 'Jitendra_Prajapati_Developer.pdf';
+    link.download = 'JitendraPrajapati.pdf';
     link.style.display = 'none'; // Optional: keep the link invisible
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
     }
+
+    function toggleMode() {
+      document.body.classList.toggle("dark-mode");
+      document.body.classList.toggle("light-mode");
+    }
+  
   </script>
       <div class="container">
 
@@ -305,14 +313,17 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Website</li>
+            <li data-filter=".filter-php">PHP</li>
+            <li data-filter=".filter-c-sharp">C#</li>
+            <li data-filter=".filter-mern">MERN</li>
+            <li data-filter=".filter-android">Android</li>
+            
+            
           </ul>
 
              <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-php">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/attendance system 1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -324,7 +335,7 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
               </div>
             </div><!-- End Portfolio Item -->
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-php">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/rentvehicle 1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -336,7 +347,7 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
               </div>
             </div><!-- End Portfolio Item -->
 
-                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-php">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/online_exam 1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -348,7 +359,7 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
               </div>
             </div><!-- End Portfolio Item -->
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-php">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/chamunda_hardware&Tools 1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -360,7 +371,7 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
               </div>
             </div><!-- End Portfolio Item -->
 
-                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-c-sharp">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/chamunda_hardware&tools asp 1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -372,7 +383,7 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
               </div>
             </div><!-- End Portfolio Item -->
 
-                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-mern">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/todolist 1.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -384,7 +395,7 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
               </div>
             </div><!-- End Portfolio Item -->
 
-                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-android">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/todoapp 4.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
@@ -396,7 +407,7 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
               </div>
             </div><!-- End Portfolio Item -->
 
-                  <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+                  <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-php">
               <div class="portfolio-content h-100">
                 <img src="assets/img/portfolio/mca.png" class="img-fluid" alt="">
                 <div class="portfolio-info">
