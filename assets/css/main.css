@@ -1279,3 +1279,33 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+/* Common styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Light mode styles */
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
