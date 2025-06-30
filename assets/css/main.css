@@ -1295,22 +1295,3 @@ section,
   /* Add your styles here */
 }
 /* Common styles */
-
-/* Light mode styles */
-.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-/* Dark mode styles */
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 20px;
-  cursor: pointer;
-}
