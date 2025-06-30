@@ -243,6 +243,47 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
     link.click();
     document.body.removeChild(link);
     }
+// Isotope initialization (you probably already have this)
+const iso = new Isotope('.isotope-container', {
+  itemSelector: '.isotope-item',
+  layoutMode: 'masonry',
+});
+
+// Filter + heading logic
+const heading = document.getElementById("portfolio-heading");
+const filters = document.querySelectorAll(".portfolio-filters li");
+
+filters.forEach(filter => {
+  filter.addEventListener("click", () => {
+    // Filter items
+    const filterValue = filter.getAttribute("data-filter");
+    iso.arrange({ filter: filterValue });
+
+    // Update heading text
+    switch (filterValue) {
+      case ".filter-php":
+        heading.textContent = "PHP Projects";
+        break;
+      case ".filter-c-sharp":
+        heading.textContent = "C# Projects";
+        break;
+      case ".filter-mern":
+        heading.textContent = "MERN Projects";
+        break;
+      case ".filter-android":
+        heading.textContent = "Android Projects";
+        break;
+      default:
+        heading.textContent = "All Projects";
+    }
+
+    // Highlight active filter
+    filters.forEach(f => f.classList.remove("active"));
+    filter.classList.add("active");
+  });
+});
+
+    
  
   </script>
       <div class="container">
@@ -307,14 +348,14 @@ I enjoy collaborating with teams, learning new technologies, and continuously im
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter=".filter-php">PHP</li>
-            <li data-filter=".filter-c-sharp">C#</li>
-            <li data-filter=".filter-mern">MERN</li>
-            <li data-filter=".filter-android">Android</li>
-            
-            
-          </ul>
+          <h2 id="portfolio-heading" class="portfolio-section-title">All Projects</h2>
+   <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+  <li data-filter="*" class="active">All</li>
+  <li data-filter=".filter-php">PHP</li>
+  <li data-filter=".filter-c-sharp">C#</li>
+  <li data-filter=".filter-mern">MERN</li>
+  <li data-filter=".filter-android">Android</li>
+</ul>
 
              <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
