@@ -309,21 +309,57 @@ I have hands-on experience in developing projects using MERN Stack (MongoDB, Exp
     <div id="project-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
       <!-- 1 -->
       <div class="project-card" data-category="php all">
-        <div class="bg-gray-800 border border-purple-500/20 rounded-2xl p-4 shadow-md hover:shadow-purple-500/30 transition flex flex-col h-full">
-          <img src="attendance system 4.png" class="rounded mb-4" data-aos="fade-up" data-aos-delay="100" />
-          <h3 class="text-xl font-semibold text-white mb-2">Attendance System</h3>
-          <p class="text-sm text-gray-300 mb-3">Attendance System is a tool or software designed to track and manage the attendance of, students. Tracks the presence or absence of individuals based on predefined criteria</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">HTML</span>
-            <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">CSS</span>
-            <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">PHP</span>
-          </div>
-          <div class="mt-auto flex gap-2">
-           <!-- <a href="#" class="px-3 py-2 bg-purple-600 text-white text-sm rounded hover:bg-purple-700">Live Demo</a>-->
-            <a href="https://github.com/jitendraprajapati9956/Attendance_System" class="px-3 py-2 border border-purple-600 text-purple-600 text-sm rounded hover:bg-purple-600 hover:text-white">GitHub</a>
-          </div>
-        </div>
-      </div>
+  <div class="bg-gray-800 border border-purple-500/20 rounded-2xl p-4 shadow-md hover:shadow-purple-500/30 transition flex flex-col h-full">
+    
+    <!-- Image Slideshow -->
+    <div class="relative w-full h-48 overflow-hidden rounded mb-4">
+      <img src="attendance system 1.png" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000 slideshow" />
+      <img src="attendance system 2.png" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slideshow" />
+      <img src="attendance system 3.png" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slideshow" />
+      <img src="attendance system 4.png" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 slideshow" />
+    </div>
+
+    <!-- Content -->
+    <h3 class="text-xl font-semibold text-white mb-2">Attendance System</h3>
+    <p class="text-sm text-gray-300 mb-3">
+      Attendance System is a tool or software designed to track and manage the attendance of students. 
+      Tracks the presence or absence of individuals based on predefined criteria
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">HTML</span>
+      <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">CSS</span>
+      <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">PHP</span>
+    </div>
+
+    <div class="mt-auto flex gap-2">
+      <a href="https://github.com/jitendraprajapati9956/Attendance_System" 
+         class="px-3 py-2 border border-purple-600 text-purple-600 text-sm rounded hover:bg-purple-600 hover:text-white">
+         GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- JS for slideshow -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slideshows = document.querySelectorAll(".slideshow");
+
+    let index = 0;
+    setInterval(() => {
+      const visible = document.querySelectorAll(".slideshow")[index];
+      visible.classList.remove("opacity-100");
+      visible.classList.add("opacity-0");
+
+      index = (index + 1) % slideshows.length;
+
+      const next = document.querySelectorAll(".slideshow")[index];
+      next.classList.remove("opacity-0");
+      next.classList.add("opacity-100");
+    }, 3000); // change every 3 seconds
+  });
+</script>
       <!-- 2 -->
       <div class="project-card" data-category="php all">
         <div class="bg-gray-800 border border-purple-500/20 rounded-2xl p-4 shadow-md hover:shadow-purple-500/30 transition flex flex-col h-full">
@@ -332,7 +368,7 @@ I have hands-on experience in developing projects using MERN Stack (MongoDB, Exp
           <p class="text-sm text-gray-300 mb-3">The Rent Vehicle service provides customers with a convenient, flexible, and cost-effective solution for short-term or long-term transportation needs. Whether it's for a business trip, vacation, special event, or daily commuting, customers can easily select and rent a vehicle of their choice from a wide range of available options.</p>
           <div class="flex flex-wrap gap-2 mb-4">
             <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">HTML</span>
-            <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">CSS</span>
+            <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">SS</span>
             <span class="bg-purple-700 text-white text-xs px-2 py-1 rounded">PHP</span>
           </div>
           <div class="mt-auto flex gap-2">
