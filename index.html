@@ -346,25 +346,7 @@ I have hands-on experience in developing projects using MERN Stack (MongoDB, Exp
   </div>
 </div>
 
-<!-- JS for slideshow -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const slideshows = document.querySelectorAll(".slideshow");
 
-    let index = 0;
-    setInterval(() => {
-      const visible = document.querySelectorAll(".slideshow")[index];
-      visible.classList.remove("opacity-100");
-      visible.classList.add("opacity-0");
-
-      index = (index + 1) % slideshows.length;
-
-      const next = document.querySelectorAll(".slideshow")[index];
-      next.classList.remove("opacity-0");
-      next.classList.add("opacity-100");
-    }, 3000); // change every 3 seconds
-  });
-</script>
       <!-- 2 -->
       <div class="project-card" data-category="php all">
         <div class="bg-gray-800 border border-purple-500/20 rounded-2xl p-4 shadow-md hover:shadow-purple-500/30 transition flex flex-col h-full">
@@ -731,6 +713,26 @@ engineering and testing</span>
         });
       }
     });
+
+    // JS for slideshow 
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const slideshows = document.querySelectorAll(".slideshow");
+
+    let index = 0;
+    setInterval(() => {
+      const visible = document.querySelectorAll(".slideshow")[index];
+      visible.classList.remove("opacity-100");
+      visible.classList.add("opacity-0");
+
+      index = (index + 1) % slideshows.length;
+
+      const next = document.querySelectorAll(".slideshow")[index];
+      next.classList.remove("opacity-0");
+      next.classList.add("opacity-100");
+    }, 3000); // change every 3 seconds
+  });
+
   </script>
 </body>
 </html>
