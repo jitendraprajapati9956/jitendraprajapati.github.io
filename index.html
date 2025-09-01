@@ -844,7 +844,7 @@ engineering and testing</span>
 
     // JS for slideshow 
 
-  document.addEventListener("DOMContentLoaded", () => {
+/*  document.addEventListener("DOMContentLoaded", () => {
     const slideshows = document.querySelectorAll(".slideshow");
 
     let index = 0;
@@ -859,7 +859,20 @@ engineering and testing</span>
       next.classList.remove("opacity-0");
       next.classList.add("opacity-100");
     }, 3000); // change every 3 seconds
+  });*/
+    const cards = document.querySelectorAll(".project-card");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      cards.forEach((card) => {
+        card.classList.add("show"); // add animation class all at once
+      });
+    }
   });
+});
+
+observer.observe(document.querySelector("#project-grid"));
 
   </script>
 </body>
