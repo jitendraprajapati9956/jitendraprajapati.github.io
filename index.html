@@ -875,5 +875,22 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(document.querySelector("#project-grid"));
 
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("jitendraprajapati9956@gmail.com"); // from EmailJS dashboard
+  })();
+
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_d8qka4c", "YOUR_TEMPLATE_ID", this)
+      .then(() => {
+        alert("Message sent successfully ✅");
+      }, (err) => {
+        alert("Failed to send ❌ " + JSON.stringify(err));
+      });
+  });
+</script>
 </body>
 </html>
