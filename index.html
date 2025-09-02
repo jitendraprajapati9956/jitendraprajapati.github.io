@@ -884,7 +884,7 @@ observer.observe(document.querySelector("#project-grid"));
   document.querySelector("form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    emailjs.sendForm("service_d8qka4c", "template_jz5e47j", this)
+    emailjs.sendForm("service_d8qka4c", "__ejs-test-mail-service__", this)
       .then(() => {
         alert("Message sent successfully ✅");
       }, (err) => {
