@@ -770,13 +770,13 @@ engineering and testing</span>
       </button>
     </div>
     
-    <form class="space-y-4">
-      <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
-      <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
-      <input type="text" placeholder="Subject" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500" />
-      <textarea placeholder="Message" rows="4" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
-      <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 rounded hover:from-purple-600 hover:to-pink-600 transition">Send</button>
-    </form>
+<form name="contact" method="POST" data-netlify="true" class="space-y-4">
+  <input type="email" name="email" placeholder="Your Email" required />
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="text" name="subject" placeholder="Subject" />
+  <textarea name="message" rows="4" placeholder="Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
   </div>
 </section>
 
