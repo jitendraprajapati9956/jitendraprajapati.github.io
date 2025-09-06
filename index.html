@@ -624,7 +624,7 @@ I have hands-on experience in developing projects using MERN Stack (MongoDB, Exp
     <h2 class="text-4xl font-bold">Education</h2>
     <div class="w-20 h-1 bg-purple-500 mx-auto mt-2 rounded"></div>
     <p class="mt-4 text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
-      A collection of my work experience and the roles I have taken in various organizations
+      
     </p>
   </div>
 
@@ -866,37 +866,20 @@ engineering and testing</span>
       next.classList.add("opacity-100");
     }, 3000); // change every 3 seconds
   });*/
-    const cards = document.querySelectorAll(".project-card");
+    document.querySelectorAll(".project-card").forEach(card => {
+    const slides = card.querySelectorAll(".slideshow");
+    let index = 0;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      cards.forEach((card) => {
-        card.classList.add("show"); // add animation class all at once
-      });
+    if (slides.length > 1) {
+      setInterval(() => {
+        slides[index].style.opacity = "0"; // hide current
+        index = (index + 1) % slides.length;
+        slides[index].style.opacity = "1"; // show next
+      }, 2500); // change every 2.5s
     }
   });
-});
 
-observer.observe(document.querySelector("#project-grid"));
-
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function() {
-    emailjs.init("Z_Hjuj9iooAwV3Xcz"); // from EmailJS dashboard
-  })();
-
-  document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    emailjs.sendForm("service_d8qka4c", "__ejs-test-mail-service__", this)
-      .then(() => {
-        alert("Message sent successfully ✅");
-      }, (err) => {
-        alert("Failed to send ❌ " + JSON.stringify(err));
-      });
-  });
+ 
 </script>
 </body>
 </html>
