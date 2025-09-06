@@ -770,12 +770,12 @@ engineering and testing</span>
       </button>
     </div>
     
-<form name="contact" method="POST" data-netlify="true" class="space-y-4">
-  <input type="email" name="email" placeholder="Your Email" required />
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="text" name="subject" placeholder="Subject" />
-  <textarea name="message" rows="4" placeholder="Message" required></textarea>
-  <button type="submit">Send</button>
+<form onsubmit="sendMail(event)" class="space-y-4">
+  <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400" />
+  <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400" />
+  <input type="text" name="subject" placeholder="Subject" class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400" />
+  <textarea name="message" rows="4" placeholder="Message" required class="w-full p-3 rounded bg-gray-700 text-white placeholder-gray-400"></textarea>
+  <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 rounded">Send</button>
 </form>
   </div>
 </section>
@@ -881,5 +881,20 @@ engineering and testing</span>
 
  
 </script>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("TP1O4aPw8E0_lrYqT");
+  })();
+
+  function sendMail(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_e0k6tin', 'template_dqlnkx9', event.target)
+      .then(() => alert('Message Sent!'))
+      .catch((err) => alert(JSON.stringify(err)));
+  }
+</script>
+  
 </body>
 </html>
