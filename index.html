@@ -11,11 +11,29 @@
     tailwind.config = {
       darkMode: 'class',
     }
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.remove('hidden');
+    } else {
+      backToTop.classList.add('hidden');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
   </script>
   <style>
     body {
       transition: background 0.5s, color 0.5s;
     }
+    html {
+  scroll-behavior: smooth; /* enables smooth scroll */
+}
+
   </style>
 </head>
 <body class="bg-white dark:bg-gradient-to-br dark:from-black dark:via-gray-900 dark:to-gray-950 text-black dark:text-white font-sans">
