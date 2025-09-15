@@ -19,6 +19,14 @@
     html {
   scroll-behavior: smooth; /* enables smooth scroll */
 }
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20%); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.4s ease-out forwards;
+}
 
   </style>
 </head>
@@ -973,6 +981,32 @@ engineering and testing</span>
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+  <script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const closeMenuButton = document.getElementById('close-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Open menu
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+    mobileMenu.classList.add('animate-slideDown');
+  });
+
+  // Close menu
+  closeMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    mobileMenu.classList.remove('animate-slideDown');
+  });
+
+  // Close when clicking any link
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('animate-slideDown');
+    });
+  });
+</script>
+
 
 </body>
 </html>
