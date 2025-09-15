@@ -11,20 +11,6 @@
     tailwind.config = {
       darkMode: 'class',
     }
-  const backToTop = document.getElementById('backToTop');
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTop.classList.remove('hidden');
-    } else {
-      backToTop.classList.add('hidden');
-    }
-  });
-
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
   </script>
   <style>
     body {
@@ -240,13 +226,14 @@ I have hands-on experience in developing projects using MERN Stack (MongoDB, Exp
     </div>
 
   </div>
-</section>
-<!-- Back to Top Button -->
+  <!-- Back to Top Button -->
 <button id="backToTop" class="hidden fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition">
   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
   </svg>
 </button>
+
+</section>
 
 
 <section id="experience" class="bg-white dark:bg-gradient-to-b dark:from-black dark:to-gray-900 px-6 py-16 text-black dark:text-white">
@@ -314,6 +301,13 @@ I have hands-on experience in developing projects using MERN Stack (MongoDB, Exp
       <div class="hidden md:block w-1/2 order-1 md:order-2"></div>
     </div>-->
   </div>
+  <!-- Back to Top Button -->
+<button id="backToTop" class="hidden fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
 </section>
 
 
@@ -640,6 +634,13 @@ I have hands-on experience in developing projects using MERN Stack (MongoDB, Exp
       </div>
       <!-- Additional project cards here -->
     </div>
+   <!-- Back to Top Button -->
+<button id="backToTop" class="hidden fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
   </section>
 
 <!-- Education Section -->
@@ -740,6 +741,13 @@ engineering and testing</span>
         <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" class="w-4 h-4" />
       </div>
   </div>
+    <!-- Back to Top Button -->
+<button id="backToTop" class="hidden fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
   </section>
 
 <section id="certificates" class="px-6 py-16 bg-gray-50 dark:bg-gray-900">
@@ -756,10 +764,15 @@ engineering and testing</span>
         <h3 class="text-xl font-semibold text-purple-600 dark:text-purple-400">JAVA With DSA</h3>
         <p class="text-sm text-gray-600 dark:text-gray-300">Alpha Placement Course(Apna College) · Issued Sep 2023</p>
         <a href="https://drive.google.com/drive/folders/1owDa7XqDP6VkFJ3v64WDO72WSe7YoqwO" class="inline-block mt-3 text-sm text-purple-600 hover:underline">View Certificate</a>
-      </div>
-
-      
+      </div>      
     </div>
+  <!-- Back to Top Button -->
+<button id="backToTop" class="hidden fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
   </section>
   <section id="contact" class="px-6 py-16 bg-gray-900 text-white">
   <div class="text-center mb-12">
@@ -821,6 +834,13 @@ engineering and testing</span>
   <button type="submit" class="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-2 rounded">Send</button>
 </form>
   </div>
+    <!-- Back to Top Button -->
+<button id="backToTop" class="hidden fixed bottom-6 right-6 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
 </section>
 
   <script>
@@ -938,6 +958,21 @@ engineering and testing</span>
       .catch((err) => alert(JSON.stringify(err)));
   }
 </script>
-  
+  <script>
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.remove('hidden');
+    } else {
+      backToTop.classList.add('hidden');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>
